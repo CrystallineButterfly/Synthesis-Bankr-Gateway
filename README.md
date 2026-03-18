@@ -1,15 +1,25 @@
 # SelfFunding Model Router
 
-- **Repo:** `Synthesis-Bankr-Gateway`
+- **Repo:** [Synthesis-Bankr-Gateway](https://github.com/CrystallineButterfly/Synthesis-Bankr-Gateway)
 - **Primary track:** Best Bankr LLM Gateway Use
 - **Category:** compute
+- **Primary contract:** `ComputeBudgetVault`
+- **Primary module:** `bankr_router`
 - **Submission status:** implementation ready, waiting for credentials and TxIDs.
+
+## What this repo does
 
 A self-funding model router that picks inference backends by task class, cost, and urgency while preserving auditability and spending limits.
 
-## Selected concept
+## Why this build matters
 
 A Python router selects models based on task class, cost, and urgency while writing auditable budget decisions to the agent log. A settlement contract stores funding thresholds, payout budgets, and self-funding checkpoints so real Bankr wallet revenue can later cover inference spend.
+
+## Submission fit
+
+- **Primary track:** Best Bankr LLM Gateway Use
+- **Overlap targets:** Bond.credit, Uniswap Agentic Finance, Lido stETH Treasury, PayWithLocus, Venice Private Agents, MetaMask Delegations
+- **Partners covered:** Bankr Gateway, Bond.credit, Uniswap, Lido, PayWithLocus, Venice, MetaMask Delegations
 
 ## Idea shortlist
 
@@ -17,11 +27,7 @@ A Python router selects models based on task class, cost, and urgency while writ
 2. Treasury-Aware Model Selector
 3. Budgeted Multi-Model Execution
 
-## Partners covered
-
-Bankr Gateway, Bond.credit, Uniswap, Lido, PayWithLocus, Venice, MetaMask Delegations
-
-## Architecture
+## System graph
 
 ```mermaid
 flowchart TD
@@ -39,14 +45,36 @@ flowchart TD
     Contract --> venice[Venice]
 ```
 
-## Repository layout
+## Repository contents
 
-- `src/`: shared policy contracts plus the repo-specific wrapper contract.
-- `script/`: Foundry deployment entrypoint.
-- `agents/`: Python runtime, partner adapters, and project metadata.
-- `scripts/`: CLI utilities for running the loop and rendering submissions.
-- `docs/`: architecture, credentials, demo script, and security notes.
-- `submissions/`: generated `synthesis.md` snippet for this repo.
+| Path | What it contains |
+| --- | --- |
+| `src/` | Shared policy contracts plus the repo-specific wrapper contract. |
+| `script/Deploy.s.sol` | Foundry deployment entrypoint for the policy contract. |
+| `agents/` | Python runtime, project spec, env handling, and partner adapters. |
+| `scripts/` | Terminal entrypoints for run, demo planning, and submission rendering. |
+| `docs/` | Architecture, credentials, security notes, and demo steps. |
+| `submissions/` | Generated `synthesis.md` snippet for this repo. |
+| `test/` | Foundry tests for the Solidity control layer. |
+| `tests/` | Python tests for runtime and project context. |
+| `agent.json` | Submission-facing agent manifest. |
+| `agent_log.json` | Local execution log and status trail. |
+
+## Autonomy loop
+
+1. Discover signals relevant to the repo track and its overlap targets.
+2. Build a bounded plan with per-action and compute caps.
+3. Persist a dry-run artifact before any live execution.
+4. Enforce onchain policy through the guarded contract wrapper.
+5. Verify outputs, update receipts, and render submission material.
+
+## Security controls
+
+- Admin-managed allowlists for targets and selectors.
+- Per-action caps, daily caps, cooldown windows, and a principal floor.
+- Reporter-only receipt anchoring and proof attachment.
+- Env-only secrets; no committed private keys or partner tokens.
+- Pause switch plus dry-run-first execution flow.
 
 ## Action catalog
 
@@ -59,6 +87,18 @@ flowchart TD
 | `paywithlocus_subaccount_pay` | PayWithLocus | Use PayWithLocus for a bounded action in this repo. | $120 | medium |
 | `venice_private_analysis` | Venice | Use Venice for a bounded action in this repo. | $5 | high |
 | `metamask_delegations_delegate_scope` | MetaMask Delegations | Use MetaMask Delegations for a bounded action in this repo. | $2 | high |
+
+## Local terminal flow (Anvil + Sepolia)
+
+```bash
+export SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/YOUR_KEY
+anvil --fork-url "$SEPOLIA_RPC_URL" --chain-id 11155111
+cp .env.example .env
+# keep private keys only in .env; TODO.md stays local-only too
+forge script script/Deploy.s.sol --rpc-url "$RPC_URL" --broadcast
+python3 scripts/run_agent.py
+python3 scripts/render_submission.py
+```
 
 ## Commands
 
