@@ -1,6 +1,6 @@
 # SelfFunding Model Router
 
-- **Repo:** TODO_GITHUB_URL/Synthesis-Bankr-Gateway
+- **Repo:** https://github.com/CrystallineButterfly/Synthesis-Bankr-Gateway
 - **Primary track:** Best Bankr LLM Gateway Use
 - **Overlap targets:** Bond.credit, Uniswap Agentic Finance, Lido stETH Treasury, PayWithLocus, Venice Private Agents, MetaMask Delegations
 - **Primary contract:** ComputeBudgetVault
