@@ -1,0 +1,16 @@
+[project]
+name = "synthesis_bankr_gateway"
+version = "0.1.0"
+description = "A self-funding model router that picks inference backends by task class, cost, and urgency while preserving auditability and spending limits."
+readme = "README.md"
+requires-python = ">=3.13"
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ty.terminal]
+error-on-warning = true
+
+[tool.ty.environment]
+python-version = "3.13"
