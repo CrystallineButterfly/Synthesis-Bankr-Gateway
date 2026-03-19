@@ -43,6 +43,14 @@ when live network credentials are absent. Network-only partners still report mis
 `cast send` output is now parsed for `transactionHash` explicitly before falling back to the
 raw stdout payload.
 
+## Track-specific trust boundaries
+
+- primary wrapper contract: `ComputeBudgetVault`
+- live-only partners: Bankr Gateway, Bond.credit, Uniswap, PayWithLocus, Venice
+- offline-prepared partners: Lido (prepared_contract_call), MetaMask Delegations (prepared_contract_call)
+- highest-sensitivity actions: bankr_gateway_compute_route, bond_credit_credit_trade, venice_private_analysis, metamask_delegations_delegate_scope
+- latest verification artifact: `artifacts/verification/0x3cdb942847ce0301b8f35d2d8da38f357409af42f8f6102b2db83586f58a71bb.json`
+
 ## Current posture
 
 ### Good
