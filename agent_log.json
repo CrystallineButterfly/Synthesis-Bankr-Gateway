@@ -7,5 +7,593 @@
     "details": {
       "status": "ready_for_credentials"
     }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:00+00:00",
+    "stage": "discover",
+    "actor": "agent_runtime",
+    "message": "Ranked local signals.",
+    "details": {
+      "signals": [
+        {
+          "name": "task_queue",
+          "description": "Inference jobs waiting for routing.",
+          "score": 95
+        },
+        {
+          "name": "budget_state",
+          "description": "Available compute budget and replenishment plan.",
+          "score": 90
+        },
+        {
+          "name": "model_routes",
+          "description": "Eligible model backends and urgency tiers.",
+          "score": 85
+        },
+        {
+          "name": "receipts",
+          "description": "Execution digests and cost proofs.",
+          "score": 80
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:00+00:00",
+    "stage": "plan",
+    "actor": "agent_runtime",
+    "message": "Built bounded plan.",
+    "details": {
+      "plan_id": "0x8332e51f765dcad722bc1b471ca5c735e34fb372145043927998cd7f8fe0e2f3"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:00+00:00",
+    "stage": "dry_run",
+    "actor": "agent_runtime",
+    "message": "Prepared partner previews.",
+    "details": {
+      "simulation_hash": "0x09f89c154c8db115f2575d19633c0c05330329da9460b32ac6f4b5f56049cb88"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:00+00:00",
+    "stage": "execute",
+    "actor": "agent_runtime",
+    "message": "Skipped live execution.",
+    "details": {
+      "missing_env": [
+        "BANKR_API_KEY",
+        "BANKR_CHAT_COMPLETIONS_URL",
+        "BANKR_MODEL",
+        "BOND_CREDIT_PROFILE_URL",
+        "GMX_ORDER_URL",
+        "LOCUS_API_KEY",
+        "LOCUS_PAYMENT_URL",
+        "RPC_URL",
+        "UNISWAP_API_KEY",
+        "UNISWAP_QUOTE_URL",
+        "VENICE_API_KEY",
+        "VENICE_CHAT_COMPLETIONS_URL",
+        "VENICE_MODEL"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:00+00:00",
+    "stage": "verify",
+    "actor": "agent_runtime",
+    "message": "Wrote verification.",
+    "details": {
+      "status": "verified",
+      "project_name": "SelfFunding Model Router",
+      "track": "Best Bankr LLM Gateway Use",
+      "plan_id": "0x8332e51f765dcad722bc1b471ca5c735e34fb372145043927998cd7f8fe0e2f3",
+      "simulation_hash": "0x09f89c154c8db115f2575d19633c0c05330329da9460b32ac6f4b5f56049cb88",
+      "execution_status": "awaiting_credentials",
+      "tx_ids": [],
+      "created_at": "2026-03-19T03:30:00+00:00"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:00+00:00",
+    "stage": "discover",
+    "actor": "agent_runtime",
+    "message": "Ranked local signals.",
+    "details": {
+      "signals": [
+        {
+          "name": "task_queue",
+          "description": "Inference jobs waiting for routing.",
+          "score": 95
+        },
+        {
+          "name": "budget_state",
+          "description": "Available compute budget and replenishment plan.",
+          "score": 90
+        },
+        {
+          "name": "model_routes",
+          "description": "Eligible model backends and urgency tiers.",
+          "score": 85
+        },
+        {
+          "name": "receipts",
+          "description": "Execution digests and cost proofs.",
+          "score": 80
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:00+00:00",
+    "stage": "plan",
+    "actor": "agent_runtime",
+    "message": "Built bounded plan.",
+    "details": {
+      "plan_id": "0x8332e51f765dcad722bc1b471ca5c735e34fb372145043927998cd7f8fe0e2f3"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:00+00:00",
+    "stage": "dry_run",
+    "actor": "agent_runtime",
+    "message": "Prepared partner previews.",
+    "details": {
+      "simulation_hash": "0x09f89c154c8db115f2575d19633c0c05330329da9460b32ac6f4b5f56049cb88"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:00+00:00",
+    "stage": "execute",
+    "actor": "agent_runtime",
+    "message": "Skipped live execution.",
+    "details": {
+      "missing_env": [
+        "BANKR_API_KEY",
+        "BANKR_CHAT_COMPLETIONS_URL",
+        "BANKR_MODEL",
+        "BOND_CREDIT_PROFILE_URL",
+        "GMX_ORDER_URL",
+        "LOCUS_API_KEY",
+        "LOCUS_PAYMENT_URL",
+        "RPC_URL",
+        "UNISWAP_API_KEY",
+        "UNISWAP_QUOTE_URL",
+        "VENICE_API_KEY",
+        "VENICE_CHAT_COMPLETIONS_URL",
+        "VENICE_MODEL"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:00+00:00",
+    "stage": "verify",
+    "actor": "agent_runtime",
+    "message": "Wrote verification.",
+    "details": {
+      "status": "verified",
+      "project_name": "SelfFunding Model Router",
+      "track": "Best Bankr LLM Gateway Use",
+      "plan_id": "0x8332e51f765dcad722bc1b471ca5c735e34fb372145043927998cd7f8fe0e2f3",
+      "simulation_hash": "0x09f89c154c8db115f2575d19633c0c05330329da9460b32ac6f4b5f56049cb88",
+      "execution_status": "awaiting_credentials",
+      "tx_ids": [],
+      "created_at": "2026-03-19T03:30:00+00:00"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:39:23.678178+00:00",
+    "stage": "security_review",
+    "actor": "audit_pass",
+    "message": "Completed the shared hardening and offline-artifact audit pass.",
+    "details": {
+      "status": "audited_ready_pending_live_credentials",
+      "primary_contract": "ComputeBudgetVault.sol"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:48:42+00:00",
+    "stage": "discover",
+    "actor": "agent_runtime",
+    "message": "Ranked local signals.",
+    "details": {
+      "signals": [
+        {
+          "name": "task_queue",
+          "description": "Inference jobs waiting for routing.",
+          "score": 95
+        },
+        {
+          "name": "budget_state",
+          "description": "Available compute budget and replenishment plan.",
+          "score": 90
+        },
+        {
+          "name": "model_routes",
+          "description": "Eligible model backends and urgency tiers.",
+          "score": 85
+        },
+        {
+          "name": "receipts",
+          "description": "Execution digests and cost proofs.",
+          "score": 80
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:48:42+00:00",
+    "stage": "plan",
+    "actor": "agent_runtime",
+    "message": "Built bounded plan for every repo action.",
+    "details": {
+      "plan_id": "0x15621f3b50411a568283712ae65912a0f5d86d16f790d31b35e343cc18712bc6",
+      "action_count": 7
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:48:42+00:00",
+    "stage": "dry_run",
+    "actor": "agent_runtime",
+    "message": "Prepared partner previews.",
+    "details": {
+      "simulation_hash": "0x0933dfbc9ea780705bd14599593ddc80d3dc764018044edb2376ca4d867aaa23"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:48:42+00:00",
+    "stage": "execute",
+    "actor": "agent_runtime",
+    "message": "Prepared offline artifacts and skipped network execution.",
+    "details": {
+      "missing_env": [
+        "BANKR_API_KEY",
+        "BANKR_CHAT_COMPLETIONS_URL",
+        "BANKR_MODEL",
+        "BOND_CREDIT_PROFILE_URL",
+        "GMX_ORDER_URL",
+        "LOCUS_API_KEY",
+        "LOCUS_PAYMENT_URL",
+        "UNISWAP_API_KEY",
+        "UNISWAP_QUOTE_URL",
+        "VENICE_API_KEY",
+        "VENICE_CHAT_COMPLETIONS_URL",
+        "VENICE_MODEL"
+      ],
+      "artifact_count": 2
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:48:42+00:00",
+    "stage": "verify",
+    "actor": "agent_runtime",
+    "message": "Wrote verification.",
+    "details": {
+      "status": "verified",
+      "project_name": "SelfFunding Model Router",
+      "track": "Best Bankr LLM Gateway Use",
+      "plan_id": "0x15621f3b50411a568283712ae65912a0f5d86d16f790d31b35e343cc18712bc6",
+      "simulation_hash": "0x0933dfbc9ea780705bd14599593ddc80d3dc764018044edb2376ca4d867aaa23",
+      "execution_status": "offline_prepared",
+      "tx_ids": [],
+      "artifact_paths": [
+        "artifacts/onchain_intents/lido_yield_route.json",
+        "artifacts/onchain_intents/metamask_delegations_delegate_scope.json"
+      ],
+      "partner_statuses": {
+        "Bankr Gateway": "awaiting_credentials",
+        "Bond.credit": "awaiting_credentials",
+        "Uniswap": "awaiting_credentials",
+        "Lido": "prepared_contract_call",
+        "PayWithLocus": "awaiting_credentials",
+        "Venice": "awaiting_credentials",
+        "MetaMask Delegations": "prepared_contract_call"
+      },
+      "created_at": "2026-03-19T03:48:42+00:00"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:50:38+00:00",
+    "stage": "discover",
+    "actor": "agent_runtime",
+    "message": "Ranked local signals.",
+    "details": {
+      "signals": [
+        {
+          "name": "task_queue",
+          "description": "Inference jobs waiting for routing.",
+          "score": 95
+        },
+        {
+          "name": "budget_state",
+          "description": "Available compute budget and replenishment plan.",
+          "score": 90
+        },
+        {
+          "name": "model_routes",
+          "description": "Eligible model backends and urgency tiers.",
+          "score": 85
+        },
+        {
+          "name": "receipts",
+          "description": "Execution digests and cost proofs.",
+          "score": 80
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:50:38+00:00",
+    "stage": "plan",
+    "actor": "agent_runtime",
+    "message": "Built bounded plan for every repo action.",
+    "details": {
+      "plan_id": "0x93d897845455a09cd269f23b1ece3df9f2a3fc95a6f52ac5372643e426173818",
+      "action_count": 7
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:50:38+00:00",
+    "stage": "dry_run",
+    "actor": "agent_runtime",
+    "message": "Prepared partner previews.",
+    "details": {
+      "simulation_hash": "0x1c594da9b4799be13876e611e4c565309d2678be2dbd66fd99ef9628462b4e47"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:50:38+00:00",
+    "stage": "execute",
+    "actor": "agent_runtime",
+    "message": "Prepared offline artifacts and skipped network execution.",
+    "details": {
+      "missing_env": [
+        "BANKR_API_KEY",
+        "BANKR_CHAT_COMPLETIONS_URL",
+        "BANKR_MODEL",
+        "BOND_CREDIT_PROFILE_URL",
+        "GMX_ORDER_URL",
+        "LOCUS_API_KEY",
+        "LOCUS_PAYMENT_URL",
+        "UNISWAP_API_KEY",
+        "UNISWAP_QUOTE_URL",
+        "VENICE_API_KEY",
+        "VENICE_CHAT_COMPLETIONS_URL",
+        "VENICE_MODEL"
+      ],
+      "artifact_count": 2
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:50:38+00:00",
+    "stage": "verify",
+    "actor": "agent_runtime",
+    "message": "Wrote verification.",
+    "details": {
+      "status": "verified",
+      "project_name": "SelfFunding Model Router",
+      "track": "Best Bankr LLM Gateway Use",
+      "plan_id": "0x93d897845455a09cd269f23b1ece3df9f2a3fc95a6f52ac5372643e426173818",
+      "simulation_hash": "0x1c594da9b4799be13876e611e4c565309d2678be2dbd66fd99ef9628462b4e47",
+      "execution_status": "offline_prepared",
+      "tx_ids": [],
+      "artifact_paths": [
+        "artifacts/onchain_intents/lido_yield_route.json",
+        "artifacts/onchain_intents/metamask_delegations_delegate_scope.json"
+      ],
+      "partner_statuses": {
+        "Bankr Gateway": "awaiting_credentials",
+        "Bond.credit": "awaiting_credentials",
+        "Uniswap": "awaiting_credentials",
+        "Lido": "prepared_contract_call",
+        "PayWithLocus": "awaiting_credentials",
+        "Venice": "awaiting_credentials",
+        "MetaMask Delegations": "prepared_contract_call"
+      },
+      "created_at": "2026-03-19T03:50:38+00:00"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:51:47+00:00",
+    "stage": "discover",
+    "actor": "agent_runtime",
+    "message": "Ranked local signals.",
+    "details": {
+      "signals": [
+        {
+          "name": "task_queue",
+          "description": "Inference jobs waiting for routing.",
+          "score": 95
+        },
+        {
+          "name": "budget_state",
+          "description": "Available compute budget and replenishment plan.",
+          "score": 90
+        },
+        {
+          "name": "model_routes",
+          "description": "Eligible model backends and urgency tiers.",
+          "score": 85
+        },
+        {
+          "name": "receipts",
+          "description": "Execution digests and cost proofs.",
+          "score": 80
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:51:47+00:00",
+    "stage": "plan",
+    "actor": "agent_runtime",
+    "message": "Built bounded plan for every repo action.",
+    "details": {
+      "plan_id": "0x7ce4f4365938684673d1002a0fd80a26e38b71d5574812b5997274cc0e94ba62",
+      "action_count": 7
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:51:47+00:00",
+    "stage": "dry_run",
+    "actor": "agent_runtime",
+    "message": "Prepared partner previews.",
+    "details": {
+      "simulation_hash": "0xc19bb0f89e44b1014182c8c95897fd928917eb3bcccc117eb39ab4cb19dee024"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:51:47+00:00",
+    "stage": "execute",
+    "actor": "agent_runtime",
+    "message": "Prepared offline artifacts and skipped network execution.",
+    "details": {
+      "missing_env": [
+        "BANKR_API_KEY",
+        "BANKR_CHAT_COMPLETIONS_URL",
+        "BANKR_MODEL",
+        "BOND_CREDIT_PROFILE_URL",
+        "GMX_ORDER_URL",
+        "LOCUS_API_KEY",
+        "LOCUS_PAYMENT_URL",
+        "UNISWAP_API_KEY",
+        "UNISWAP_QUOTE_URL",
+        "VENICE_API_KEY",
+        "VENICE_CHAT_COMPLETIONS_URL",
+        "VENICE_MODEL"
+      ],
+      "artifact_count": 2
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:51:47+00:00",
+    "stage": "verify",
+    "actor": "agent_runtime",
+    "message": "Wrote verification.",
+    "details": {
+      "status": "verified",
+      "project_name": "SelfFunding Model Router",
+      "track": "Best Bankr LLM Gateway Use",
+      "plan_id": "0x7ce4f4365938684673d1002a0fd80a26e38b71d5574812b5997274cc0e94ba62",
+      "simulation_hash": "0xc19bb0f89e44b1014182c8c95897fd928917eb3bcccc117eb39ab4cb19dee024",
+      "execution_status": "offline_prepared",
+      "tx_ids": [],
+      "artifact_paths": [
+        "artifacts/onchain_intents/lido_yield_route.json",
+        "artifacts/onchain_intents/metamask_delegations_delegate_scope.json"
+      ],
+      "partner_statuses": {
+        "Bankr Gateway": "awaiting_credentials",
+        "Bond.credit": "awaiting_credentials",
+        "Uniswap": "awaiting_credentials",
+        "Lido": "prepared_contract_call",
+        "PayWithLocus": "awaiting_credentials",
+        "Venice": "awaiting_credentials",
+        "MetaMask Delegations": "prepared_contract_call"
+      },
+      "created_at": "2026-03-19T03:51:47+00:00"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:52:08+00:00",
+    "stage": "discover",
+    "actor": "agent_runtime",
+    "message": "Ranked local signals.",
+    "details": {
+      "signals": [
+        {
+          "name": "task_queue",
+          "description": "Inference jobs waiting for routing.",
+          "score": 95
+        },
+        {
+          "name": "budget_state",
+          "description": "Available compute budget and replenishment plan.",
+          "score": 90
+        },
+        {
+          "name": "model_routes",
+          "description": "Eligible model backends and urgency tiers.",
+          "score": 85
+        },
+        {
+          "name": "receipts",
+          "description": "Execution digests and cost proofs.",
+          "score": 80
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:52:08+00:00",
+    "stage": "plan",
+    "actor": "agent_runtime",
+    "message": "Built bounded plan for every repo action.",
+    "details": {
+      "plan_id": "0x3cdb942847ce0301b8f35d2d8da38f357409af42f8f6102b2db83586f58a71bb",
+      "action_count": 7
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:52:08+00:00",
+    "stage": "dry_run",
+    "actor": "agent_runtime",
+    "message": "Prepared partner previews.",
+    "details": {
+      "simulation_hash": "0x65e8099545d3d1c7faea61557de3c11730e44f9d347ae74fd7ce265edf65ccec"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:52:08+00:00",
+    "stage": "execute",
+    "actor": "agent_runtime",
+    "message": "Prepared offline artifacts and skipped network execution.",
+    "details": {
+      "missing_env": [
+        "BANKR_API_KEY",
+        "BANKR_CHAT_COMPLETIONS_URL",
+        "BANKR_MODEL",
+        "BOND_CREDIT_PROFILE_URL",
+        "GMX_ORDER_URL",
+        "LOCUS_API_KEY",
+        "LOCUS_PAYMENT_URL",
+        "UNISWAP_API_KEY",
+        "UNISWAP_QUOTE_URL",
+        "VENICE_API_KEY",
+        "VENICE_CHAT_COMPLETIONS_URL",
+        "VENICE_MODEL"
+      ],
+      "artifact_count": 2
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:52:08+00:00",
+    "stage": "verify",
+    "actor": "agent_runtime",
+    "message": "Wrote verification.",
+    "details": {
+      "status": "verified",
+      "project_name": "SelfFunding Model Router",
+      "track": "Best Bankr LLM Gateway Use",
+      "plan_id": "0x3cdb942847ce0301b8f35d2d8da38f357409af42f8f6102b2db83586f58a71bb",
+      "simulation_hash": "0x65e8099545d3d1c7faea61557de3c11730e44f9d347ae74fd7ce265edf65ccec",
+      "execution_status": "offline_prepared",
+      "tx_ids": [],
+      "artifact_paths": [
+        "artifacts/onchain_intents/lido_yield_route.json",
+        "artifacts/onchain_intents/metamask_delegations_delegate_scope.json"
+      ],
+      "partner_statuses": {
+        "Bankr Gateway": "awaiting_credentials",
+        "Bond.credit": "awaiting_credentials",
+        "Uniswap": "awaiting_credentials",
+        "Lido": "prepared_contract_call",
+        "PayWithLocus": "awaiting_credentials",
+        "Venice": "awaiting_credentials",
+        "MetaMask Delegations": "prepared_contract_call"
+      },
+      "created_at": "2026-03-19T03:52:08+00:00"
+    }
   }
 ]
