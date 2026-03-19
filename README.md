@@ -5,7 +5,7 @@
 - **Category:** compute
 - **Primary contract:** `ComputeBudgetVault`
 - **Primary module:** `bankr_router`
-- **Submission status:** implementation ready, waiting for credentials and TxIDs.
+- **Submission status:** audited and offline-demo ready; optional live partner credentials unlock network execution.
 
 ## What this repo does
 
@@ -67,6 +67,34 @@ flowchart TD
 3. Persist a dry-run artifact before any live execution.
 4. Enforce onchain policy through the guarded contract wrapper.
 5. Verify outputs, update receipts, and render submission material.
+
+## Current readiness
+
+- **Latest verification:** `verified` at `2026-03-19T03:52:08+00:00`
+- **Execution mode:** `offline_prepared`
+- **Offline-prepared partners:** Lido (prepared_contract_call), MetaMask Delegations (prepared_contract_call)
+- **Live credential blockers:** Bankr Gateway, Bond.credit, Uniswap, PayWithLocus, Venice
+- **Audit docs:** `docs/audit.md`, `docs/live_readiness.md`
+
+## Most sensitive actions
+
+- `bankr_gateway_compute_route` (Bankr Gateway, high)
+- `bond_credit_credit_trade` (Bond.credit, high)
+- `venice_private_analysis` (Venice, high)
+- `metamask_delegations_delegate_scope` (MetaMask Delegations, high)
+
+## Live blocker details
+
+- **Bankr Gateway** — BANKR_API_KEY, BANKR_CHAT_COMPLETIONS_URL, BANKR_MODEL — https://bankr.bot/
+- **Bond.credit** — GMX_ORDER_URL, BOND_CREDIT_PROFILE_URL — https://bond.credit/
+- **Uniswap** — UNISWAP_API_KEY, UNISWAP_QUOTE_URL — https://developers.uniswap.org/
+- **PayWithLocus** — LOCUS_API_KEY, LOCUS_PAYMENT_URL — https://docs.locus.finance/
+- **Venice** — VENICE_API_KEY, VENICE_CHAT_COMPLETIONS_URL, VENICE_MODEL — https://docs.venice.ai/
+
+## Latest evidence artifacts
+
+- `artifacts/onchain_intents/lido_yield_route.json`
+- `artifacts/onchain_intents/metamask_delegations_delegate_scope.json`
 
 ## Security controls
 
